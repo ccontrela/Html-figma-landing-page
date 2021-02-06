@@ -1,0 +1,748 @@
+/* Jerónimo Matavel => https://github.com/Jeronimo-MZ */
+
+/* Mobile */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Globals ============= */
+
+:root {
+    font-size: 62.5%;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    height: auto;
+    
+    background-color: #181818;
+    position: relative;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 5.2rem;
+    font-weight: 400;
+}
+
+
+/* buttons */
+.button {
+    font-size: 1.7rem;
+    color: white;
+    text-decoration: none;
+    padding: 1rem 4rem;
+    border: 1px solid white;
+    animation-fill-mode: backwards;
+    transition: .25s;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.button.btn-blue {
+    background-color: #4452FE;
+    border: 1px solid #4452FE;
+    color:white;
+}
+/* back-to-top */
+.back-to {
+    color:white;
+    text-decoration: none;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    padding: 1rem;
+    z-index: 999;
+    border-radius: 50%;
+    font-size: 2.5rem;
+    transition: .25s;
+    display: none;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.2);
+    
+}
+.back-to:hover {
+    color: black;
+    background-color: white;
+}
+/* Header ======================= */
+/* Nav Bar ======================= */
+#nav-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+}
+
+#nav-bar nav {
+    background-color: #181818;
+    width: 100%;
+    left: -100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 98px;
+    
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: .2s;
+}
+#nav-bar input[type="checkbox"]:checked ~ nav{
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+#nav-bar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.7rem;
+    padding: 2rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.027);
+    transition: ease-in-out .1s;
+}
+#nav-bar nav a:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+#nav-bar input[type="checkbox"]{
+    display: none;
+}
+
+
+.right-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+}
+
+#nav-bar label img {
+    margin-left: 1rem;
+}
+/* Text content */
+
+header .text-content {
+    width: 100%;
+    height: fit-content;
+    padding: 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+
+}
+
+header .text-content h1 {
+    width: 80%;
+    margin-bottom: 2rem;
+    line-height: 5.5rem;
+}
+
+header .text-content p {
+
+    width: 80%;
+}
+
+/* buttons */
+
+header .buttons {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+header .buttons .button {
+    margin-top: 2rem;
+    width: 18rem;
+    text-align: center;
+    padding: 2rem 4rem;
+    height: max-content;
+}
+
+
+/* image */
+
+header .screens {
+   position: relative;
+   z-index: -1;
+}
+
+header .screens img {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 73.44%;
+    bottom: 0%;
+
+    width: 100%;
+    object-fit: contain;
+}
+
+/* Main======================================================================= */
+
+/* Section -- Features ===========================================*/
+section#features {
+    background: #18181813;
+    backdrop-filter: blur(.15rem);
+    width: 100%;
+    margin-top: 28rem;
+    padding: 10rem 4rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    /* -moz-box-shadow:    0 -40px 60px 60px #1818186e;
+    -webkit-box-shadow: 0 -40px 60px 60px #1818186e;
+    box-shadow:         0 -40px 80px 40px #1818186e; */
+
+}
+section#features h1 {
+    margin-bottom: 1rem;
+}
+
+section#features img {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 400px;
+}
+section#features .features-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+section#features .feature {
+    max-width: 350px;
+    width: fit-content;
+}
+section#features .feature .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+section#features .feature img {
+    width: 50px;
+    height: 100px;
+    margin: 0;
+}
+
+section#features .feature h1 {
+    font-size: 2rem;
+    width: 50%;
+    text-align: left;
+    margin: 0;
+    margin-left: 10px;
+}
+
+
+/* Section - contents ====================================== */
+section#contents {
+    background-color: #18181865;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 4rem;
+}
+
+section#contents .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#contents .text-content p {
+    max-width: 80%;
+    text-align: center;
+
+}
+
+/* #contents => cards =====================*/
+
+.card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin-top: 4rem;
+    border-radius: 2rem;
+    padding: 5rem 4rem;
+}
+
+.card h1 {
+    color: black;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card p {
+    color: black;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.card .button {
+    margin-bottom: 4rem;
+}
+
+.card img {
+    margin: 0;
+    width: 290px;
+    height: 180px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* Gallery ===================================== */
+section#gallery {
+    padding: 8rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#gallery h1 {
+    text-align: center;
+
+}
+section#gallery p {
+    width: 80%;
+    margin-top: 2rem;
+    text-align: center;
+}
+section#gallery .images img {
+    border-radius: 1.5rem;
+
+}
+
+section#gallery .images-mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    padding: 6rem 0;
+}
+
+section#gallery .images-mobile img {
+    width: 329px;
+    height: 285px;
+    object-fit: cover;
+}
+
+section#gallery .images-desktop {
+    display: none;
+
+}
+
+/* section#Partners ================================= */
+section#partners {
+    padding: 0rem 10rem 8rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section#partners .text-content {
+    width: 100%;
+    text-align: center;
+}
+section#partners .text-content h1 {
+    width: 100%;
+    text-align: center;
+}
+section#partners .text-content p {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+section#partners .partners-logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 4rem 0;
+    flex-wrap: wrap;
+    gap: 4rem;
+    max-width: 800px;
+}
+section#partners .partners-logos img {
+    width: 60px;
+}
+
+/* section#testimonials ======================================== */
+section#testimonials {
+    padding: 0rem 5rem 8rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+section#testimonials .testimonials-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1000px;
+    align-items: top;
+    justify-content: center;
+}
+
+section#testimonials .testimonial {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid white;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 2rem;
+    border-radius: 1rem;
+}
+
+section#testimonials .testimonial .author img {
+    width:  70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.testimonial .author {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 2rem;
+}
+section#testimonials .testimonial .author .name {
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+section#testimonials .testimonial .author .occupation {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.testimonial > p {
+    font-size: 1.8rem;
+    text-align: left;
+    line-height: 2.8rem;
+}
+
+/* section#cta ============================= */
+
+section#cta {
+    padding: 6rem 6rem 8rem 6rem;
+    background-color: #1a1a1a;
+}
+
+section#cta .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+section#cta .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+
+}
+section#cta  h2 {
+    font-size: 5.2rem;
+    text-align: center;
+    font-weight: 400;
+}
+section#cta .button {
+    display: inline-block;
+    align-self: center;
+    margin-bottom: 6rem;
+}
+
+section#cta img.mobile {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: 500px;
+
+}
+
+.desktop {
+    display: none;
+}
+
+/* Footer =========================== */
+footer {
+    padding: 8rem 10rem;
+    border-top: 1px solid rgba(245, 245, 245, 0.034);
+}
+
+footer #footer-nav{
+    margin-bottom: 2rem;
+
+}
+footer #footer-nav ul h2{
+    font-size: 2.5rem;
+    padding: 3rem 0 2rem;
+}
+footer #footer-nav ul li {
+    
+    list-style-type: none;
+    font-size: 2rem;
+    padding: .5rem 1rem;
+}
+footer #footer-nav ul li a { 
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+footer #footer-nav ul li a:hover {
+    text-decoration: underline; 
+}
+
+footer .contact {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+footer .contact p {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+footer .contact .social-media i {
+    font-size: 3rem;
+    margin-right: 1.5rem;
+    color: white;
+}
+
+/* Tablet & Desktop ================================ */
+@media (min-width:880px) {
+    /* header ============================ */
+    header {
+        padding: 0;
+    }
+    #nav-bar {
+        padding: 1rem 6%;
+    }
+    #nav-bar nav {
+        display: flex;
+        position: static;
+        top:initial;
+        right: initial;
+        visibility: visible;
+        opacity: 1;
+        flex-direction: row;
+        background-color: transparent;
+        padding: 1rem;
+    }
+    #nav-bar nav a {
+        padding: 0 2rem;
+        white-space: nowrap;
+        width: fit-content;
+        border: none;
+    }
+    
+    #nav-bar nav a:hover {
+        background-color: transparent;
+        color: white;
+        text-decoration: underline;
+    }
+    #nav-bar label {
+        display:none;
+    }
+    /* buttons */
+    header .buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    /* Main */
+    /* Section -- Features */
+    section#features {
+        margin-top: 55rem;
+        display: flex;
+        align-items: center;
+
+    }
+    section#features .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
+    }
+    
+    section#features img {
+        max-width: 100%;
+    }
+    
+    .features-container {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
+    
+    .features-list {
+        height: 100%;
+        justify-content: space-between;
+    }
+    
+    /* section #contents */
+    
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+    
+    /* Section#cta ================= */
+    section#cta .content{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        justify-content: space-between;
+        gap: 4rem;
+        overflow: hidden;
+        background-color: #343434;
+        border-radius: 2rem;
+        padding: 2rem;
+    }
+    
+    section#cta h2 {
+        font-size: 4rem;
+    }
+    
+    .mobile {
+        display: none;
+    }
+    img.desktop {
+        display: initial;
+        width: 100%;
+        object-fit: cover;
+        position: relative;
+        bottom:-13%;
+        left: 5%;
+    }
+}
+
+/* Gallery Mobile */
+@media (min-width: 1150px) {
+    
+    section#gallery .images-mobile{
+        display: none;
+    }
+    
+    section#gallery .images-desktop {
+        display: flex;
+        flex-direction: column;  
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+        padding: 6rem 0;
+
+    }
+    
+    .images-desktop .first img 
+    .images-desktop .second:nth-child(2) {
+        width: 225px;
+        height: 285px;
+        object-fit: cover;
+    }
+    .images-desktop .first,
+    .images-desktop .second {
+        display: flex;
+        flex-direction: row;
+        gap: 3rem
+    }
+}
+
+
+@media (min-width: 720px) {
+    
+    /* Footer */
+    footer {
+        display: flex;
+        /* grid-template-columns: 3fr 1fr; */
+        padding: 8rem 2rem;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+    footer #footer-nav {
+        display: grid;
+        gap: 4rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1000px) {
+
+
+    footer {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        padding: 8rem 20%;
+        align-items: center;
+        justify-content: center;
+        gap: 4rem;
+    }
+    
+    footer .contact {
+        justify-content: space-between;
+        /* margin-top: 6rem; */
+    }
+    
+
+}
+
+/* Jerónimo Matavel => https://github.com/Jeronimo-MZ */
