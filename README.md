@@ -1,4 +1,12 @@
-# figma-land-landing-page-dark
-Clone of the Figma Land's Figma Startup Template
+# figma-landing-page-dark
+This is a figma landing page with darkmode.
 
-Link to the original Template https://figmaland.com/templates/dark-startup
+## Screenshots
+You can see image files in repository.
+
+![](banner.png)
+
+## Creator
+
+Golden DV
+
